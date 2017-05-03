@@ -8,25 +8,10 @@ namespace Func_Test
 {
     class Program
     {
-        //https://dotblogs.com.tw/initials/2017/02/11/a02_func
-        //https://dotblogs.com.tw/kinanson/2015/04/12/151032
-        //https://dotblogs.com.tw/lastsecret/2010/06/26/16201
-        //https://az787680.vo.msecnd.net/user/lastsecret/1006/Funclambda_F7B4/image_thumb_1.png
-        //http://www.huanlintalk.com/2009/01/delegate-revisited-csharp-1-to-2-to-3.html
         static void Main(string[] args)
         {
-            //傳入int ,回傳string  ;*Func(一定有回傳) 沒有回傳的是Action
-            //Func<int, string> doo = Method;
-
-            // doo傳入int 5的數字, 預期回傳string
-            //string re = doo(5);
-
-            //Console.WriteLine(re);
-            //Console.ReadLine();
-
             FuncDelegate func = new FuncDelegate();
             GetNumber getNumber = new GetNumber();
-
             //這邊我們動態決定了要使用乘法，傳進去4*5
             Console.WriteLine(getNumber.ReturnString(func.Multiplied, 4, 5)); 
             Console.ReadLine();
@@ -64,14 +49,6 @@ namespace Func_Test
                 return string.Format("除法:{0}", a / b);
             }
 
-        }
-
-
-
- public static string Method(int x)
-        {
-            var temp = "傳入的數字是: " + x.ToString();
-            return temp; //回傳String
         }
     }
 }
